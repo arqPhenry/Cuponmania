@@ -39,38 +39,40 @@
                 </h1>
             </div>
         </div>
-        <div class="coupon">
-            <div class="coupon-info">
-                <div class="title">
-                    <span>Cupón de descuento</span>
-                    <img src="https://cdn-icons-png.flaticon.com/512/4649/4649107.png" alt="icono">
-                </div>
-                <div class="codebutton">
-                    <div class="code">
-                        <input type="text" id="codCupon" placeholder="XXAWSXXX">
+        <div>
+            <div class="coupon">
+                <div class="coupon-info">
+                    <div class="title">
+                        <span>Cupón de descuento</span>
+                        <img src="https://cdn-icons-png.flaticon.com/512/4649/4649107.png" alt="icono">
                     </div>
-                    <div class="button">
-                        <button type="button" onclick="calculosCupon()">Ver desct.</button>
+                    <div class="codebutton">
+                        <div class="code">
+                            <input type="text" id="codCupon" placeholder="XXAWSXXX">
+                        </div>
+                        <div class="button">
+                            <button type="button" onclick="calculosCupon()">Ver desct.</button>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="coupon-calculos">
-                <div class="monto">
-                    <label for="monto">Ingrese su monto base:</label>
-                    <input type="number" id="monto" placeholder="0 $">
+                <div class="coupon-calculos">
+                    <div class="monto">
+                        <label for="monto">Ingrese su monto base:</label>
+                        <input type="number" id="monto" placeholder="0 $">
+                    </div>
+                    <div class="descuento">
+                        <span>Descuento:</span>
+                        <span class="dmonto" id="descuento">0 %</span>
+                    </div>
                 </div>
-                <div class="descuento">
-                    <span>Descuento:</span>
-                    <span class="dmonto" id="descuento">0 %</span>
-                </div>
-            </div>
-            <div class="coupon-finish">
-                <div class="total">
-                    <span>Total a pagar:</span>
-                    <span class="ftotal" id="totalis">0 $</span>
-                </div>
-                <div class="button2">
-                    <button type="button" onclick="calcularTotal()">Ver pago</button>
+                <div class="coupon-finish">
+                    <div class="total">
+                        <span>Total a pagar:</span>
+                        <span class="ftotal" id="totalis">0 $</span>
+                    </div>
+                    <div class="button2">
+                        <button type="button" onclick="calcularTotal()">Ver pago</button>
+                    </div>
                 </div>
             </div>
         </div>

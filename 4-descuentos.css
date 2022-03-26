@@ -29,6 +29,7 @@ body{
     background-position-x: 49%;
     background-position-y: 80%;
     background-size: 20rem;
+    margin: 12px;
 }
 
 .landing .inicio h1{
@@ -98,9 +99,11 @@ select option{
 .coupon{
     display: grid;
     grid-template-rows: auto auto auto;
+    grid-template-columns: auto auto auto;
+    gap: 12px;
     padding: 12px;
-    height: 280px;
-    width: 400px;
+    height: auto;
+    width: auto;
     border-radius: 20px;
     background-color: #ffe54a;
     box-shadow: 15px 9px 35px 1px rgba(0,0,0,0.25);
@@ -113,46 +116,57 @@ input{
     font-size: var(--md);
 }
 .coupon-info{
+    grid-column: span 3;
     display: grid;
+    gap: 12px;
     grid-template-rows: auto auto;
+    grid-template-columns: auto auto auto;
     border-bottom: 3px dotted var(--rojofuerte);
     padding-bottom: 10px;
 }
-.coupon-info input{
-    width: 176px;
-    height: 42px;
-    padding: 0 12px 0 12px;
-    border-radius: 12px;
-    border: none;
-    background-color: var(--text-input-field);
-}
 .coupon-info .title{
+    grid-column: span 3;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     background-color: var(--text-input-field);
     border-radius: 12px;
-    margin-bottom: 12px;
 }
 .coupon-info .title span{
     font-size: var(--lg);
     font-weight: 700;
     padding: 0 12px 0 12px;
 }
-.coupon-info .codebutton{
-    display: grid;
-    grid-template-columns: 1fr auto;
-    align-items: center;
-}
 .coupon-info img{
     height: 42px;
     padding: 0 12px 0 12px;
 }
+.coupon-info .codebutton{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 12px;
+    grid-column: span 3;
+}
+.coupon-info .code{
+    grid-column: span 2;   
+}
+.coupon-info .code input{
+    height: 42px;
+    padding: 0 12px 0 12px;
+    border: none;
+    border-radius: 12px;
+    background-color: var(--text-input-field);
+}
+.coupon-info .button{
+    grid-column: span 1;
+}
 
 .coupon-calculos{
-    display: flex;
-    justify-content: space-between;
+    grid-column: span 3;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 12px;
     border-bottom: 3px dotted var(--rojofuerte);
     padding-bottom: 10px;
     padding-top: 4px;
@@ -161,6 +175,12 @@ input{
 .coupon-calculos .monto{
     display: grid;
     grid-template-rows: auto auto;
+}
+.coupon-calculos .descuento{
+    grid-column: span 1;
+}
+.coupon-calculos .monto{
+    grid-column: span 2;
 }
 .coupon-calculos .descuento .dmonto{
     height: 42px;
@@ -172,10 +192,8 @@ input{
     justify-content: center;
     font-weight: 700;
     font-size: var(--md);
-    width: 100px;
 }
 .coupon-calculos input{
-    width: 176px;
     height: 42px;
     padding: 0 12px 0 12px;
     border-radius: 12px;
@@ -183,17 +201,19 @@ input{
     background-color: var(--text-input-field);
 }
 .coupon-finish{
-    display: flex;
-    justify-content: space-between;
+    grid-column: span 3;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 12px;
     align-items: flex-end;
     padding-top: 4px;
 }
 .coupon-finish .total{
+    grid-column: span 2;
     display: grid;
     grid-template-rows: auto auto;
 }
 .coupon-finish .total .ftotal{
-    width: 176px;
     height: 42px;
     padding: 0 12px 0 12px;
     border-radius: 12px;
@@ -204,13 +224,17 @@ input{
     font-size: var(--md);
     margin-top: 4px;
 }
+.coupon-finish .button2{
+    grid-column: span 1;
+    display: flex;
+    justify-content: end;
+}
 .coupon-finish button{
     background-color: var(--rojoclaro);
     color: white;
     font-size: var(--md);
     font-weight: 500;
     height: 42px;
-    width: 124px;
     border: none;
     border-radius: 12px;
     cursor: pointer;
@@ -226,7 +250,6 @@ input{
     font-size: var(--md);
     font-weight: 500;
     height: 42px;
-    width: 124px;
     border: none;
     border-radius: 12px;
     cursor: pointer;
